@@ -13,16 +13,22 @@
     // Browser globals
     root.backbrace = factory( root._, root.Backbone, root.riveter, root.postal, root );
   }
-}( this, function ( _, Backbone, riveter, postal, root, undefined ) {
+}( window || this, function ( _, Backbone, riveter, postal, root, undefined ) {
 
   var backbrace = root.backbrace || {};
 
-  // import("view.js")
-  // import("messagingMixin.js")
+  // import("./view/view.js")
+  // import("./model/model.js")
+  // import("./mixin/messagingMixin.js")
+  // import("./mixin/validation.js")
+  // import("./mixin/collectionView.js")
 
   riveter( backbrace.View );
+  riveter( backbrace.Model );
 
   backbrace.View = backbrace.View.compose( messagingMixin );
+  backbrace.CollectionView = backbrace.View.compose( collectionViewMixin );
+  backbrace.Model = backbrace.Model.compose( messagingMixin, modelValidationMixin );
 
   return backbrace;
 

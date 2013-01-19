@@ -1,4 +1,4 @@
-var messagingMixin = {
+var messagingMixin = backbrace.messagingMixin = {
   _preInit: function(attributes, options) {
     options = (this instanceof Backbone.View ? attributes : options) || {};
     this.subscriptions = _.extend({}, this.subscriptions, options.subscriptions);
