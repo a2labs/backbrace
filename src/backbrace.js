@@ -19,14 +19,15 @@
 
   // import("./view/view.js")
   // import("./model/model.js")
-  // import("./mixin/messagingMixin.js")
-  // import("./mixin/validation.js")
+  // import("./mixin/messaging.js")
+  // import("./mixin/modelValidation.js")
+  // import("./mixin/viewValidation.js")
   // import("./mixin/collectionView.js")
 
   riveter( backbrace.View );
   riveter( backbrace.Model );
 
-  backbrace.View = backbrace.View.compose( messagingMixin );
+  backbrace.View = backbrace.View.compose( messagingMixin, viewValidation );
   backbrace.CollectionView = backbrace.View.compose( collectionViewMixin );
   backbrace.Model = backbrace.Model.compose( messagingMixin, modelValidationMixin );
 

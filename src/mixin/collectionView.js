@@ -6,7 +6,6 @@ var collectionViewMixin = backbrace.collectionViewMixin = collectionView = {
       this.collection.on("add",    this.addChild,    this);
       this.collection.on("remove", this.removeChild, this);
     }
-    //_.bindAll(this, "getViewConstructor", "addChild", "removeChild", "remove", "removeAllChildren", "renderChild", "removeChildView", "render");
   },
 
   mixin: {
