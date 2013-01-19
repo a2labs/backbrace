@@ -1,0 +1,53 @@
+{
+    "name" : "backbrace",
+    "description" : "A collection of commonly used backbone extensions/mixins.",
+    "version" : "0.0.1",
+    "homepage" : "https://github.com/a2labs/backbrace/",
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/a2labs/backbrace.git"
+    },
+	"author" : "Jim Cowart (http://freshbrewedcode.com/jimcowart)",
+    "contributors": [
+        {
+            "name" : "Jim Cowart",
+            "email" : "jim@ifandelse.com",
+            "url" : "http://freshbrewedcode.com/jimcowart"
+        },
+        {
+            "name" : "Doug Neiner",
+            "email" : "doug@dougneiner.com",
+            "url" : "http://code.dougneiner.com"
+        }
+    ],
+	"keywords" : [
+		"backbone",
+        "underscore"
+	],
+    "bugs" : {
+        "email" : "jim@ifandelse.com",
+        "url" : "http://github.com/a2labs/backbrace/issues"
+   },
+	"directories" : { "lib" : "lib" },
+    "main" : "lib/backbrace.js",
+	"engines" : {
+		"node" : ">=0.4.0"
+	},
+	"dependencies" : {
+		"underscore" : ">=1.1.7",
+		"backbone"   : ">=0.9.10",
+		"riveter"    : ">=0.1.1"
+	},
+	"bundleDependencies" : [ "underscore" ],
+	"devDependencies" : {},
+    "licenses" : [
+        {
+            "type" : "MIT",
+            "url" : "http://www.opensource.org/licenses/mit-license.php"
+        },
+        {
+            "type" : "GPL",
+            "url" : "http://www.opensource.org/licenses/gpl-3.0.html"
+        }
+    ]
+}
