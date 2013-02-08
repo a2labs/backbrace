@@ -3,8 +3,8 @@ backbrace.View = Backbone.View.extend( {
   // DOM manipulation should be limited to the scope of the view
   // So let's remove the need for global jQuery/$ access
   $ : function ( selector ) {
-    if ( _.isObject( selector ) || TAG_REGEX.test( selector ) ) {
-      return $( selector );
+    if ( typeof selector !== "string" || TAG_REGEX.test( selector ) ) {
+      return Backbone.$( selector );
     }
     return this.$el.find( selector );
   },
